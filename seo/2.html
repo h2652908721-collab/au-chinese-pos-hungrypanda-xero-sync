@@ -1,0 +1,33 @@
+<!doctype html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>多个外卖平台菜单同步到POS方案 — 菜单同步通</title>
+<meta name="description" content="开了三四个平台、每次改个价格要登进去改四遍、改完发现少改了一个、结果Uber Eats还在卖旧价——这种崩溃感，做外卖的基本都经历过。菜单同步这件事听起来是小事，但真出了问题，要么漏单、要么售出超库存、要么被平台扣分。这篇文章就是把自己踩过的坑和见过的方案摆出来，给你参考。">
+<meta property="og:type" content="article"><meta property="og:title" content="多个外卖平台菜单同步到POS方案 — 菜单同步通">
+<style>
+:root{--ink:#0d1b2a;--bg:#f5f8fb;--card:#fff;--teal:#0b7d73;--muted:#5a6b7b;--line:#e3eaf1}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"PingFang SC",system-ui,sans-serif;color:var(--ink);
+background:var(--bg);line-height:1.75;-webkit-text-size-adjust:100%}
+.wrap{max-width:680px;margin:0 auto;padding:24px 20px 60px}
+.back{display:inline-block;color:var(--teal);text-decoration:none;font-size:.9rem;margin-bottom:20px}
+h1{font-size:clamp(1.5rem,1.2rem+2vw,2rem);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
+.intro{font-size:1.08rem;color:#26323f;margin-bottom:8px}
+h2{font-size:1.15rem;margin:26px 0 6px;letter-spacing:-.01em}
+p{margin-bottom:6px;color:#2c3a47}
+.takeaway{background:#e3f4f1;border-left:3px solid var(--teal);border-radius:10px;
+padding:16px 18px;margin:28px 0;font-weight:600}
+.cta{display:block;text-align:center;background:linear-gradient(135deg,#0e9488,#0b7d73);
+color:#fff;text-decoration:none;font-weight:700;padding:15px;border-radius:12px;margin:24px 0}
+.disc{background:#fff8ec;border:1px solid #f4e3c1;color:#7a5c1e;border-radius:10px;
+padding:12px 14px;font-size:.82rem;line-height:1.6;margin-top:24px}
+footer{color:#8a98a6;font-size:.78rem;margin-top:20px;text-align:center}
+</style></head><body><div class="wrap">
+<a class="back" href="../index.html">← 回到 菜单同步通</a>
+<h1>多个外卖平台菜单同步到POS方案</h1>
+<p class="intro">开了三四个平台、每次改个价格要登进去改四遍、改完发现少改了一个、结果Uber Eats还在卖旧价——这种崩溃感，做外卖的基本都经历过。菜单同步这件事听起来是小事，但真出了问题，要么漏单、要么售出超库存、要么被平台扣分。这篇文章就是把自己踩过的坑和见过的方案摆出来，给你参考。</p>
+<h2>为什么菜单同步这么难</h2><p>每个平台的后台逻辑都不一样：DoorDash、Uber Eats、Menulog各有各的菜单字段、图片规格、分类结构。有些平台开放了API、有些只能手动改。你在自己POS里改了价格，那个改动根本不会自动跑到平台去——除非你专门花时间打通这条路。</p><h2>三种主流方案，各有代价</h2><p>第一种：手动维护，成本最低但最累，菜单一多就容易出错。第二种：用中间件聚合器（比如Deliverect、Mr Yum这类），把POS数据推给各平台，理论上改一处全更新——但要收月费，具体费用以官方或持牌中介为准，接入成本不低。第三种：用POS厂商自己的平台集成，部分POS本身就对接了Uber Eats直连，稳定但覆盖的平台数有限。</p><h2>中间件好用，但别被销售忽悠</h2><p>聚合器工具的卖点是「一次配置、多平台同步」，实际使用要注意：初始菜单迁移往往要花几天时间重新整理结构，不是导入就完事；平台偶尔的字段变更可能导致同步静默失败，需要人工去查日志才发现。费用和合约条款以各家官方为准，签之前把退出条款搞清楚，别被锁住。</p><h2>POS自带集成靠不靠谱</h2><p>要看你用的是哪款POS、对接的是哪个平台。有些POS和Uber Eats、DoorDash有官方直连合作，菜单和订单都能直接进POS，体验相对顺；但并不是所有POS都覆盖全部平台。买POS之前直接问清楚「你们支持哪几个平台直连」，别等装好了才发现少了一个。</p><h2>实际踩坑总结</h2><p>图片规格不统一是最常见的坑——某平台要求特定比例，传错了菜品直接显示不出来。营业时间和分时段菜单（午餐档、晚餐档）很多同步工具处理得不够好，要单独测试。库存售罄状态能不能实时同步也要确认，不然旺季卖完了单还在进来，处理起来很麻烦。</p>
+<div class="takeaway">👉 先列清楚你现在用的POS型号和接入的平台列表，拿这张清单直接去问POS厂商技术支持有没有直连方案，没有再去约两三家聚合器做实际演示对比，比任何人告诉你「哪个最好」都管用。</div>
+<a class="cta" href="../index.html#join">想要完整避坑清单 + 内测?点这里 →</a>
+<div class="disc">⚠️ 本文为面向在澳华人的经验参考,非移民法律意见。具体政策、分数、费用、条款以官方(immi.homeaffairs.gov.au)及持牌移民代理/律师为准。</div>
+<footer>© 菜单同步通</footer>
+</div></body></html>

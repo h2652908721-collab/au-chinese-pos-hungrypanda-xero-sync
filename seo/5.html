@@ -1,0 +1,33 @@
+<!doctype html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Redcat HungryHungry和MYOB怎么整合 — 菜单同步通</title>
+<meta name="description" content="开了餐厅，前台用 Redcat 和 HungryHungry 收单，财务又要跑 MYOB 做账，两边数据怎么对得上？每到月底手动抄数、核账，账目一塌糊涂——这是好多在澳华人餐饮老板的真实写照。这篇文章不卖课、不推服务，就是把过来人踩过的坑说清楚，帮你少走弯路。">
+<meta property="og:type" content="article"><meta property="og:title" content="Redcat HungryHungry和MYOB怎么整合 — 菜单同步通">
+<style>
+:root{--ink:#0d1b2a;--bg:#f5f8fb;--card:#fff;--teal:#0b7d73;--muted:#5a6b7b;--line:#e3eaf1}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"PingFang SC",system-ui,sans-serif;color:var(--ink);
+background:var(--bg);line-height:1.75;-webkit-text-size-adjust:100%}
+.wrap{max-width:680px;margin:0 auto;padding:24px 20px 60px}
+.back{display:inline-block;color:var(--teal);text-decoration:none;font-size:.9rem;margin-bottom:20px}
+h1{font-size:clamp(1.5rem,1.2rem+2vw,2rem);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
+.intro{font-size:1.08rem;color:#26323f;margin-bottom:8px}
+h2{font-size:1.15rem;margin:26px 0 6px;letter-spacing:-.01em}
+p{margin-bottom:6px;color:#2c3a47}
+.takeaway{background:#e3f4f1;border-left:3px solid var(--teal);border-radius:10px;
+padding:16px 18px;margin:28px 0;font-weight:600}
+.cta{display:block;text-align:center;background:linear-gradient(135deg,#0e9488,#0b7d73);
+color:#fff;text-decoration:none;font-weight:700;padding:15px;border-radius:12px;margin:24px 0}
+.disc{background:#fff8ec;border:1px solid #f4e3c1;color:#7a5c1e;border-radius:10px;
+padding:12px 14px;font-size:.82rem;line-height:1.6;margin-top:24px}
+footer{color:#8a98a6;font-size:.78rem;margin-top:20px;text-align:center}
+</style></head><body><div class="wrap">
+<a class="back" href="../index.html">← 回到 菜单同步通</a>
+<h1>Redcat HungryHungry和MYOB怎么整合</h1>
+<p class="intro">开了餐厅，前台用 Redcat 和 HungryHungry 收单，财务又要跑 MYOB 做账，两边数据怎么对得上？每到月底手动抄数、核账，账目一塌糊涂——这是好多在澳华人餐饮老板的真实写照。这篇文章不卖课、不推服务，就是把过来人踩过的坑说清楚，帮你少走弯路。</p>
+<h2>两个系统各管什么</h2><p>Redcat 是澳洲餐饮行业常见的 POS 和运营管理平台，HungryHungry 是挂在它生态里的在线点餐系统，两者本来就是一家人，数据在 Redcat 后台里是打通的。MYOB 是财务软件，管的是发票、GST、工资、报税这些事。你要做的，是把 Redcat 里的销售流水「搬」进 MYOB，让两边的数字能对上。</p><h2>官方有没有直接接口</h2><p>Redcat 官方有提供数据导出功能，具体支持哪些格式、能不能直连 MYOB，以官方或持牌中介为准，版本不同差别很大。部分用户反映可以导出 CSV 或 Excel 再手动导入 MYOB，也有人通过第三方中间件（比如 Dext、ApprovalMax 一类的工具）做自动同步，但费用和兼容性以各平台官网为准，不要轻信二手信息。</p><h2>最常见的踩坑点</h2><p>第一是 GST 分类对不上，Redcat 里的税率设置如果当初没配好，导过去的数字会乱。第二是小费和退款，这两项在 MYOB 里需要单独的账目处理，很多人直接忽略，月底差几百块找不到原因。第三是结算周期，HungryHungry 的线上订单款项到账时间跟堂食不同，要分开核，不然现金流报告会很难看。</p><h2>实际操作建议</h2><p>先不要急着买任何插件或中间件，第一步是联系 Redcat 客服，问清楚你当前版本支持哪些导出选项，截图或者录屏留存。然后把这份信息拿给你的 MYOB 顾问或者会计看，让他们评估最省力的对接方式。两边都确认可行之后再动手，别自己摸着石头过河，因为配错了清理起来比手动更麻烦。</p><h2>找谁来帮最划算</h2><p>如果你的会计懂 MYOB 但不懂 Redcat，可以请 Redcat 的认证合作伙伴（官网有列表）陪着做一次初始配置，费用以官方或持牌中介为准。华人社区里也有专门做餐饮系统对接的 IT 顾问，口碑靠谱的不少，但一定要问清楚他们有没有实际做过 Redcat 加 MYOB 这个组合，别被「都懂」给糊弄了。</p>
+<div class="takeaway">👉 今天就做一件事：登录 Redcat 后台找到「Reports」或「Export」相关菜单，截图发给你的会计，问他能不能直接用——这一步能帮你排除掉一半的弯路。</div>
+<a class="cta" href="../index.html#join">想要完整避坑清单 + 内测?点这里 →</a>
+<div class="disc">⚠️ 本文为面向在澳华人的经验参考,非移民法律意见。具体政策、分数、费用、条款以官方(immi.homeaffairs.gov.au)及持牌移民代理/律师为准。</div>
+<footer>© 菜单同步通</footer>
+</div></body></html>

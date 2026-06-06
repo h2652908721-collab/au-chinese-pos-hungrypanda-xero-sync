@@ -1,0 +1,33 @@
+<!doctype html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>亿食EASI和Xero怎么自动对账 — 菜单同步通</title>
+<meta name="description" content="很多在澳洲开餐厅的朋友都用亿食EASI接单,账期到了看到银行进了一笔钱,打开Xero一脸懵:这笔钱对应哪几天的订单?佣金扣了多少?退款又是怎么算的?每个月手动对一次账能把人逼疯。这篇文章是踩坑之后整理的思路,不是教程,是聊聊实际操作里那些没人告诉你的细节。">
+<meta property="og:type" content="article"><meta property="og:title" content="亿食EASI和Xero怎么自动对账 — 菜单同步通">
+<style>
+:root{--ink:#0d1b2a;--bg:#f5f8fb;--card:#fff;--teal:#0b7d73;--muted:#5a6b7b;--line:#e3eaf1}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"PingFang SC",system-ui,sans-serif;color:var(--ink);
+background:var(--bg);line-height:1.75;-webkit-text-size-adjust:100%}
+.wrap{max-width:680px;margin:0 auto;padding:24px 20px 60px}
+.back{display:inline-block;color:var(--teal);text-decoration:none;font-size:.9rem;margin-bottom:20px}
+h1{font-size:clamp(1.5rem,1.2rem+2vw,2rem);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
+.intro{font-size:1.08rem;color:#26323f;margin-bottom:8px}
+h2{font-size:1.15rem;margin:26px 0 6px;letter-spacing:-.01em}
+p{margin-bottom:6px;color:#2c3a47}
+.takeaway{background:#e3f4f1;border-left:3px solid var(--teal);border-radius:10px;
+padding:16px 18px;margin:28px 0;font-weight:600}
+.cta{display:block;text-align:center;background:linear-gradient(135deg,#0e9488,#0b7d73);
+color:#fff;text-decoration:none;font-weight:700;padding:15px;border-radius:12px;margin:24px 0}
+.disc{background:#fff8ec;border:1px solid #f4e3c1;color:#7a5c1e;border-radius:10px;
+padding:12px 14px;font-size:.82rem;line-height:1.6;margin-top:24px}
+footer{color:#8a98a6;font-size:.78rem;margin-top:20px;text-align:center}
+</style></head><body><div class="wrap">
+<a class="back" href="../index.html">← 回到 菜单同步通</a>
+<h1>亿食EASI和Xero怎么自动对账</h1>
+<p class="intro">很多在澳洲开餐厅的朋友都用亿食EASI接单,账期到了看到银行进了一笔钱,打开Xero一脸懵:这笔钱对应哪几天的订单?佣金扣了多少?退款又是怎么算的?每个月手动对一次账能把人逼疯。这篇文章是踩坑之后整理的思路,不是教程,是聊聊实际操作里那些没人告诉你的细节。</p>
+<h2>先搞清楚EASI怎么打款</h2><p>EASI不是每笔订单单独打款,而是按周期结算,把一段时间的订单金额扣掉佣金和其他费用后,一笔打到你账户。所以你在银行看到的那个数字,永远对不上某一天的营业额。要搞清楚这笔钱的构成,必须先去EASI商家后台把对应周期的「结算报表」下载下来,那里才有明细。</p><h2>Xero这边怎么接收数据</h2><p>Xero可以通过银行Feed自动抓取交易,EASI打款进来就会出现在「未对账」列表里。但光有这一条进账远远不够——你还需要把EASI报表里的佣金、退款、各种调整项单独拆出来,才能让Xero那边的账真正平。很多人卡在这一步,因为只处理了收入,没处理扣费。</p><h2>有没有自动对账的路子</h2><p>市面上有些第三方工具声称能把EASI数据自动推到Xero,但具体支持哪些功能、稳不稳定、费用多少,以官方或持牌中介为准,我不敢乱说确数。比较稳的做法是:从EASI后台导出CSV报表,在Xero里建对应的「手动日记账」或用批量导入处理。麻烦一点,但每一分钱去哪了你心里有数。</p><h2>最容易踩的三个坑</h2><p>第一个坑是退款——顾客退款EASI可能直接从下期结算里扣,不单独出现,很多人漏掉了。第二个坑是佣金里的GST,能不能抵扣、怎么处理,涉及税务,一定要问会计师或BAS代理,不要猜。第三个坑是日期错位,银行进账日期和EASI结算周期不一致,跨月时容易搞乱期间归属。</p><h2>找会计前先备好这些料</h2><p>如果要让会计帮你理这块,提前准备好:EASI每个结算周期的报表PDF或CSV、银行对账单、以及你自己记录的退款和争议订单。资料齐了对账才快,否则会计找数据的时间你也在付钱。</p>
+<div class="takeaway">👉 这周就去EASI后台下载最近一期结算报表,和银行进账核对一下差额是不是佣金——搞清楚这个逻辑,后面每个月就不会再对着Xero发呆了。</div>
+<a class="cta" href="../index.html#join">想要完整避坑清单 + 内测?点这里 →</a>
+<div class="disc">⚠️ 本文为面向在澳华人的经验参考,非移民法律意见。具体政策、分数、费用、条款以官方(immi.homeaffairs.gov.au)及持牌移民代理/律师为准。</div>
+<footer>© 菜单同步通</footer>
+</div></body></html>
